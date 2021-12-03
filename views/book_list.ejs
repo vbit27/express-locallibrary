@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title%></h1>
+
+    <%- include('./partials/nav.ejs') %> 
+
+    <% book_list.forEach(book => { %>
+      <a href=<%= book.url%>>
+        <h3><%= book.title %></h3>
+      </a>
+        <p><%= book.author.name %></p>
+      </a>
+    <% }) %>
+  </body>
+</html>
